@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
+// Channel statistics - update these as needed
+const CHANNEL_STATS = {
+  views: "20.8K",
+  viewsPeriod: "28 days",
+  subscribers: 67,
+  newSubscribers: 42,
+  newSubsPeriod: "this month",
+};
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -117,7 +126,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-amber-500 mb-4">About Our Channel</h3>
             <p className="text-gray-300 text-lg leading-relaxed">
               We make 60-second pet chaos with Archie (Golden), Rocco (Corgi), Des (Siamese) & Pete (Bombay). 
-              20.8K views last 28 days • 67 subs • 42 new this month. 
+              {CHANNEL_STATS.views} views last {CHANNEL_STATS.viewsPeriod} • {CHANNEL_STATS.subscribers} subs • {CHANNEL_STATS.newSubscribers} new {CHANNEL_STATS.newSubsPeriod}. 
               Soon: auto-feeders, 3D-print files, SaaS wait-list.
             </p>
           </motion.div>
