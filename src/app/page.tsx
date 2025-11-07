@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
+// Channel configuration
+const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@PawfectlyWhiskered";
+
 // Channel statistics - update these as needed
 const CHANNEL_STATS = {
   views: "20.8K",
@@ -39,7 +42,7 @@ export default function Home() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="https://www.youtube.com/@PawfectlyWhiskered"
+                href={YOUTUBE_CHANNEL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-semibold transition-colors duration-200"
@@ -74,7 +77,7 @@ export default function Home() {
           >
             <div className="px-4 py-4 space-y-3">
               <a
-                href="https://www.youtube.com/@PawfectlyWhiskered"
+                href={YOUTUBE_CHANNEL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-semibold text-center transition-colors duration-200"
